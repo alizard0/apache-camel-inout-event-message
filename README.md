@@ -1,4 +1,4 @@
-# camel-inout-event-message
+# camel-request-reply
 proof of concept for camel-rabbitmq using camel-rest for exposing rabbitmq routes.
 
 **run rabbitmq locally**
@@ -11,12 +11,13 @@ $ docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 my-rabbit:late
 **run application**
 ```bash
 $ mvn clean package
-$ java -jar target/camel-rabbitmq-poc-0.0.1-SNAPSHOT.jar 
+$ java -jar target/camel-request-reply-0.0.1-SNAPSHOT.jar
 ```
 
 **test with POST**
 ```bash
 $ curl -X POST localhost:8080/api/event -d '{"key1":"value1", "key2":"value2"}' -H 'Content-type: application/json'
+// this will be blocked until someone consume and reply to the queue's message
 ```
 
 **expected output**

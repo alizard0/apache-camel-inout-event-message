@@ -10,10 +10,10 @@
 	</parent>
 
 	<groupId>com.example</groupId>
-	<artifactId>camel-inout-event-message</artifactId>
+	<artifactId>camel-request-reply</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>camel-inout-event-message</name>
-	<description>POC for camel-inout-event-message</description>
+	<name>camel-request-reply</name>
+	<description>POC for camel-request-reply</description>
 
 	<properties>
 		<java.version>1.8</java.version>
