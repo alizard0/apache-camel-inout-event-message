@@ -10,6 +10,7 @@ public class ConsumerEventRoute extends RouteBuilder {
   public void configure() {
     from("rabbitmq://localhost?queue=request")
             .log("Message received ${body} ${headers}")
+            .delay(5000)
             .transform().constant("Thats a reply!")
             .log("Message sent ${body}");
   }
